@@ -18,13 +18,13 @@ my $file        = "sl.xml";
 
 #get response
 my $response    = getstore($url, $file);
-my $doc         = $parser->XMLin($file);
+my $doc         = $parser->XMLin($file, ForceArray=>['Bus']);
 
 # read XML file
 #/ResponseOfDepartures/ResponseData/Buses/Bus/"buss från"..StopAreaName.."Till"..Destination.."Avgår"..DisplayTime
 foreach $e (@{$doc->{ResponseData}->{Buses}->{Bus}})
 {
-                print "Buss från ", $e->{StopAreaName}, " mot ", $e->{Destination}, " avgår ";
+                print "Buss ", $e->{LineNumber}, " från ", $e->{StopAreaName}, " mot ", $e->{Destination}, " avgår ";
                 if ($e->{DisplayTime} eq 'Nu') {
                         print "nu";
                 }
