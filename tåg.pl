@@ -20,7 +20,7 @@ my $file        = "sl2.xml";
 
 #get response
 my $response    = getstore($url, $file);
-my $doc         = $parser->XMLin($file);
+my $doc         = $parser->XMLin($file, ForceArray=>['Metro']);
 
 #print Dumper($doc);
 #die;
@@ -29,7 +29,7 @@ my $doc         = $parser->XMLin($file);
 #/ResponseOfDepartures/ResponseData/Buses/Bus/"buss från"..StopAreaName.."Till"..Destination.."Avgår"..DisplayTime
 foreach $e (@{$doc->{ResponseData}->{Metros}->{Metro}})
 {
-                print "Tåg från ", $e->{StopAreaName}, " mot ", $e->{Destination};
+                print $e->{GroupOfLine}, " ", $e->{LineNumber}, " från ", $e->{StopAreaName}, " mot ", $e->{Destination};
 
                 print " avgår ";
 
