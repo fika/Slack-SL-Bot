@@ -14,11 +14,21 @@ do
                 then
                         siteid=$(/root/uppslag.pl $(echo "$NEWS" | grep -oP '\&text=[^&]+' | grep -oP "\+.*" | sed -e 's/+//' | tail -n $DIFF))
                         output=$(/root/buss.pl $siteid)
-                        /root/post.sh $output
+                        IFS=$'.'
+                        for i in $output; do
+                                echo $i
+                                /root/post.sh $i
+                        done
+                        unset IFS
                 else
                         siteid=$(/root/uppslag.pl $(echo "$NEWS" | grep -oP '\&text=[^&]+' | grep -oP "\+.*" | sed -e 's/+//' | tail -n $DIFF))
                         output=$(/root/tåg.pl $siteid)
-                        /root/post.sh $output
+                        IFS=$'.'
+                        for i in $output; do
+                                echo $i
+                                /root/post.sh $i
+                        done
+                        unset IFS
                 fi
         fi
         OLDCOUNT=$COUNT
