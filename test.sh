@@ -20,9 +20,20 @@ do
                                 /root/post.sh $i
                         done
                         unset IFS
-                else
+                elif [ "$traveltype" = "tub" ]
+                then
                         siteid=$(/root/uppslag.pl $(echo "$NEWS" | grep -oP '\&text=[^&]+' | grep -oP "\+.*" | sed -e 's/+//' | tail -n $DIFF))
                         output=$(/root/tåg.pl $siteid)
+                        IFS=$'.'
+                        for i in $output; do
+                                echo $i
+                                /root/post.sh $i
+                        done
+                        unset IFS
+                elif [ "$traveltype" = "pendel" ]
+                then
+                        siteid=$(/root/uppslag.pl $(echo "$NEWS" | grep -oP '\&text=[^&]+' | grep -oP "\+.*" | sed -e 's/+//' | tail -n $DIFF))
+                        output=$(/root/pendel.pl $siteid)
                         IFS=$'.'
                         for i in $output; do
                                 echo $i
