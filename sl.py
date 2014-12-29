@@ -9,7 +9,7 @@ context = ET.iterparse(file_path, events=("start", "end"))
 
 #Do magic stuff!
 context = iter(context)
-on_buses_tag = False
+on_buses_tag = on_metro_tag = on_train_tag = False
 for event, elem in context:
     tag = elem.tag
     value = elem.text
@@ -19,6 +19,10 @@ for event, elem in context:
     if event == 'start' :
         if tag == "Buses" :
             on_buses_tag = True
+        elif tag == "Metros" :
+            on_metro_tag = True
+        elif tag == "Trains" :
+            on_train_tag = True
 
         elif tag == 'LineNumber' :
             if on_buses_tag :
@@ -31,6 +35,6 @@ for event, elem in context:
         		print "mot %s" % value
 
 
-    if event == 'end' and tag =='members' :
-        on_buses_tag = False
+    if event == 'end' :
+        on_buses_tag = on_metro_tag = on_train_tag = False
     elem.clear()
