@@ -51,3 +51,4 @@ for rs in realtid_ourResult:
                 print output
                 i += 1
         else:
+                pass
