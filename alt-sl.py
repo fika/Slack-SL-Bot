@@ -18,7 +18,7 @@ uppslag_full_url = uppslag_url + '?' + uppslag_url_values
 uppslag_data = urllib2.urlopen(uppslag_full_url)
 
 uppslag_document = ElementTree.parse(uppslag_data)
-uppslag_sites = uppslag_document.find('ResponseData/Site')
+uppslag_sites = uppslag_document.find('ResponseData/Site') # http://api.sl.se/api2/typeahead.xml?key=8c9bf84d3f3746eab8568891dafe74f8&searchstring=slussen&stationsonly=True&maxresults=3
 for Site in uppslag_sites:
         if Site.tag == 'SiteId':
                 siteid = Site.text
