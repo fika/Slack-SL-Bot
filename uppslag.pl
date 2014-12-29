@@ -28,10 +28,8 @@ my $response    = getstore($url, $file);
 my $doc         = $parser->XMLin($file);
 
 # read XML file
-#/ResponseOfDepartures/ResponseData/Buses/Bus/"buss från"..StopAreaName.."Till"..Destination.."Avgår"..DisplayTime
 foreach $e (@{$doc->{ResponseData}->{Site}})
 {
-#               print $e->{SiteId}, "\n";
                 push (@siteids, $e->{SiteId});
 
 }
