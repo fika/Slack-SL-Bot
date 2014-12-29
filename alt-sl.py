@@ -33,7 +33,7 @@ realtid_url = 'http://api.sl.se/api2/realtimedepartures.xml'
 realtid_full_url = realtid_url + '?' + realtid_url_values
 realtid_data = urllib2.urlopen(realtid_full_url)
 realtid_document = ElementTree.parse(realtid_data)
-realtid_buses = realtid_document.find('ResponseData/Buses/Bus')
+realtid_buses = realtid_document.find('ResponseData/Buses/Bus') # DEN HÄR VARIABLEN BLIR "None", måste fixas!!
 for Bus in realtid_buses:
         if Bus.tag == 'LineNumber':
                 linenumber = Bus.text
