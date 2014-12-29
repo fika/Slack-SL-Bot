@@ -1,0 +1,141 @@
+<ResponseOfDepartures xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<StatusCode>0</StatusCode>
+<ExecutionTime>0</ExecutionTime>
+<ResponseData>
+<LatestUpdate xmlns="http://sl.se/Departures.xsd">2014-12-13T22:15:19</LatestUpdate>
+<DataAge xmlns="http://sl.se/Departures.xsd">49</DataAge>
+<Metros xmlns="http://sl.se/Departures.xsd"/>
+<Buses xmlns="http://sl.se/Departures.xsd">
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Stora Essingen</Destination>
+<JourneyDirection>1</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10156</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:16:10</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:16:10</ExpectedDateTime>
+<DisplayTime>Nu</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Frihamnen</Destination>
+<JourneyDirection>2</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10155</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:21:42</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:24:25</ExpectedDateTime>
+<DisplayTime>8 min</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Stora Essingen</Destination>
+<JourneyDirection>1</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10156</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:26:10</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:26:21</ExpectedDateTime>
+<DisplayTime>10 min</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Frihamnen</Destination>
+<JourneyDirection>2</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10155</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:36:42</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:37:13</ExpectedDateTime>
+<DisplayTime>21 min</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Stora Essingen</Destination>
+<JourneyDirection>1</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10156</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:41:10</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:41:10</ExpectedDateTime>
+<DisplayTime>25 min</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Frihamnen</Destination>
+<JourneyDirection>2</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10155</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:51:42</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:51:42</ExpectedDateTime>
+<DisplayTime>22:51</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Stora Essingen</Destination>
+<JourneyDirection>1</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10156</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T22:56:10</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T22:56:10</ExpectedDateTime>
+<DisplayTime>22:56</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Frihamnen</Destination>
+<JourneyDirection>2</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10155</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T23:06:42</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T23:06:42</ExpectedDateTime>
+<DisplayTime>23:06</DisplayTime>
+</Bus>
+<Bus>
+<TransportMode>BUS</TransportMode>
+<LineNumber>1</LineNumber>
+<Destination>Stora Essingen</Destination>
+<JourneyDirection>1</JourneyDirection>
+<SiteId>1142</SiteId>
+<GroupOfLine>blåbuss</GroupOfLine>
+<StopAreaName>Kampementsbacken</StopAreaName>
+<StopAreaNumber>10155</StopAreaNumber>
+<StopPointNumber>10156</StopPointNumber>
+<TimeTabledDateTime>2014-12-13T23:11:10</TimeTabledDateTime>
+<ExpectedDateTime>2014-12-13T23:11:10</ExpectedDateTime>
+<DisplayTime>23:11</DisplayTime>
+</Bus>
+</Buses>
+<Trains xmlns="http://sl.se/Departures.xsd"/>
+<Trams xmlns="http://sl.se/Departures.xsd"/>
+<Ships xmlns="http://sl.se/Departures.xsd"/>
+<StopPointDeviations xmlns="http://sl.se/Departures.xsd"/>
+</ResponseData>
+</ResponseOfDepartures>
