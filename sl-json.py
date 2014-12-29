@@ -35,15 +35,19 @@ realtid_full_url = realtid_url + '?' + realtid_url_values
 realtid_data = urllib2.urlopen(realtid_full_url)
 realtid_string = realtid_data.read()
 realtid_decoded = json.loads(realtid_string)
-realtid_ourResult = realtid_decoded['ResponseData']['Buses'] #Metros för tåg, Trains för pendel, Trams för lokalbana(roslagsbanan ex), Ships för båtar. https://www.trafiklab.se/api/sl-realtidsinformation-3/sl-realtidsinformation-3
+realtid_ourResult = realtid_decoded['ResponseData']['Buses']
 
+i = 0
 for rs in realtid_ourResult:
-        looped = u'Buss ' + rs['LineNumber'] + u' från ' + rs['StopAreaName'] + ' mot ' + rs['Destination'] + u' avgår '
-        if 'Nu' in rs['DisplayTime']:
-                displaytime = 'nu'
-        elif ':' in rs['DisplayTime']:
-                displaytime = rs['DisplayTime']
-        elif 'min' in rs['DisplayTime']:
-                displaytime = 'om ' + rs['DisplayTime']
-        output = looped + displaytime
-        print output
+        if i < 5:
+                looped = u'Buss ' + rs['LineNumber'] + u' från ' + rs['StopAreaName'] + ' mot ' + rs['Destination'] + u' avgår '
+                if 'Nu' in rs['DisplayTime']:
+                        displaytime = 'nu'
+                elif ':' in rs['DisplayTime']:
+                        displaytime = rs['DisplayTime']
+                elif 'min' in rs['DisplayTime']:
+                        displaytime = 'om ' + rs['DisplayTime']
+                output = looped + displaytime
+                print output
+                i += 1
+        else:
