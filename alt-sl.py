@@ -17,5 +17,11 @@ url = 'http://api.sl.se/api2/typeahead.xml'
 full_url = url + '?' + url_values
 data = urllib2.urlopen(full_url)
 
+document = ElementTree.parse(data)
+sites = document.find('ResponseData/Site')
+
 #Output
-print data.read()
+
+for Site in sites:
+        if Site.tag == 'SiteId':
+                print Site.text
