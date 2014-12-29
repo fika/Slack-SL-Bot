@@ -24,4 +24,4 @@ sites = document.find('ResponseData/Site')
 
 for Site in sites:
         if Site.tag == 'SiteId':
-                print Site.text
+                siteid = Site.text
