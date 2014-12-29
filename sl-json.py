@@ -21,7 +21,8 @@ uppslag_decoded = json.loads(uppslag_string)
 uppslag_ourResult = uppslag_decoded['ResponseData']
 
 for rs in uppslag_ourResult:
-        siteid =  rs['SiteId']
+        siteid = rs['SiteId']
+#return siteid #om det ska vara en funktion
 
 #New vars!
 realtid_data = {}
