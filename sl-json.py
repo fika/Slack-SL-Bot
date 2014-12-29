@@ -23,7 +23,7 @@ uppslag_sites = uppslag_document.find('ResponseData/Site')
 for Site in uppslag_sites:
         if Site.tag == 'SiteId':
                 siteid = Site.text
-print siteid
+#print siteid
 #New vars!
 realtid_data = {}
 realtid_data['key'] = '9e99975c83864b6f8dab6ab4baddaba8'
@@ -35,4 +35,17 @@ realtid_full_url = realtid_url + '?' + realtid_url_values
 realtid_data = urllib2.urlopen(realtid_full_url)
 realtid_string = realtid_data.read()
 realtid_decoded = json.loads(realtid_string)
-print json.dumps(realtid_decoded, sort_keys=True, indent=4)
+data = json.dumps(realtid_decoded, sort_keys=True, indent=4)
+ourResult = realtid_decoded['ResponseData']['Buses']
+ppourResult = json.dumps(ourResult, sort_keys=True, indent=4)
+
+for rs in ourResult:
+        looped = u'Buss ' + rs['LineNumber'] + u' från ' + rs['StopAreaName'] + ' mot ' + rs['Destination'] + u' avgår '
+        if 'Nu' in rs['DisplayTime']:
+                displaytime = 'nu'
+        elif ':' in rs['DisplayTime']:
+                displaytime = rs['DisplayTime']
+        elif 'min' in rs['DisplayTime']:
+                displaytime = 'om ' + rs['DisplayTime']
+        output = looped + displaytime
+        print output
