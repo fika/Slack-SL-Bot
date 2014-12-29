@@ -31,9 +31,9 @@ realtid_data['timewindow'] = 15
 realtid_url_values = urllib.urlencode(realtid_data)
 realtid_url = 'http://api.sl.se/api2/realtimedepartures.xml'
 realtid_full_url = realtid_url + '?' + realtid_url_values
-realtid_data = urllib2.urlopen(realtid_full_url)
-realtid_document = ElementTree.parse(realtid_data)
-realtid_buses = realtid_document.find('ResponseData/Buses/Bus') # DEN HÄR VARIABLEN BLIR "None", måste fixas!!
+realtid_data = urllib2.urlopen(realtid_full_url) #Ladda ner XML-dokumentet
+realtid_document = ElementTree.parse(realtid_data) #Här stoppar vi in XML-dokumentet efter parse i realtid_document
+realtid_buses = realtid_document.find('ResponseData/Buses/Bus') # DEN HÄR VARIABLEN BLIR "None", måste fixas!! # Vi letar igenom realtid_document efter ReponseData/Buses/Bus (se http://api.sl.se/api2/realtimedepartures.xml?timewindow=15&siteid=1142&key=9e99975c83864b6f8dab6ab4baddaba8 för att förstå bättre), och lägger i variabel.
 for Bus in realtid_buses:
         if Bus.tag == 'LineNumber':
                 linenumber = Bus.text
