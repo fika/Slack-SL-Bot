@@ -10,7 +10,7 @@ use URI;
 my $parser      = new XML::Simple;
 my $url         = URI->new( 'http://api.sl.se/api2/realtimedepartures.xml?' );
 $url->query_form(
-        'key'           => '9e99975c83864b6f8dab6ab4baddaba8',
+        'key'           => '<API-KEY>',
         'siteid'        => $ARGV[0],
         'timewindow'    => '30',
 );
