@@ -14,4 +14,4 @@ json="{\"channel\": \"#$channel\", \"username\": \"SL-Bot\", \"text\": \"$escape
 echo ""
 echo ""
 echo $json >> /root/text.txt
-curl -s -d "payload=$json" "https://hooks.slack.com/services/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"
+curl -s -d "payload=$json" "<SLACK HOOK>"
