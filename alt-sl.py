@@ -9,7 +9,7 @@ import sys
 
 #Vars!
 uppslag_data = {}
-uppslag_data['key'] = '8c9bf84d3f3746eab8568891dafe74f8' #SL PLATSUPPSLAG API-NYCKEL
+uppslag_data['key'] = '<API-KEY>' #SL PLATSUPPSLAG API-NYCKEL
 uppslag_data['maxresults'] = '1'
 uppslag_data['searchstring'] = sys.argv[1]
 uppslag_url_values = urllib.urlencode(uppslag_data)
@@ -25,7 +25,7 @@ for Site in uppslag_sites:
 
 #New vars!
 realtid_data = {}
-realtid_data['key'] = '9e99975c83864b6f8dab6ab4baddaba8'
+realtid_data['key'] = '<API-KEY>'
 realtid_data['siteid'] = siteid
 realtid_data['timewindow'] = 15
 realtid_url_values = urllib.urlencode(realtid_data)
