@@ -16,7 +16,7 @@ $stations = "True";
 my $parser      = new XML::Simple;
 my $url         = URI->new( 'http://api.sl.se/api2/typeahead.xml?' );
 $url->query_form(
-        'key'           => '8c9bf84d3f3746eab8568891dafe74f8',
+        'key'           => '<API-KEY>',
         'searchstring'  => $searchstring,
         'stationsonly'  => $stations,
         'maxresults'    => $maxresults,
