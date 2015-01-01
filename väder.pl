@@ -7,7 +7,7 @@ use LWP::Simple;
 use URI;
 
 my $parser      = new XML::Simple;
-my $url         = URI->new( 'http://api.wunderground.com/api/bea8694a90215068/conditions/lang:SW/q/PWS:ISTOCKHO170.xml?' );
+my $url         = URI->new( 'http://api.wunderground.com/api/<KEY>/conditions/lang:SW/q/PWS:ISTOCKHO170.xml?' );
 my $file        = "väder.xml";
 
 #get response
